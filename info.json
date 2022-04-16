@@ -6,9 +6,10 @@
     "author": "AdamCirillo",
     "dependencies":[
         "angelssmelting >= 0.6.18",
-        "bobplates",
         "flib",
         "? angelsaddons-storage",
+        "? angelsindustries",
+        "? bobplates",
         "? bobtech",
         "? angelsbioprocessing >= 0.7.21",
         "? Clowns-Processing"

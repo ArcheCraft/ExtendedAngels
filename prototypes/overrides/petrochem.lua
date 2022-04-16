@@ -34,3 +34,4 @@ if settings.startup["extangels-adjust-ordering"].value then
         if recipe then recipe.subgroup = nil end
     end
 end
+

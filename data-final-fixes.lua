@@ -21,6 +21,7 @@ for _, recipe in pairs(recipe_list) do
     end
 end
 
+
 -- Component/Tech overhaul recipe corrections
 local previous_building = {
     "algae-farm-5",

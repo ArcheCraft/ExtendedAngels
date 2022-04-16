@@ -1,65 +1,4 @@
 data:extend({
-    -- Angels copper tungsten smelting 1
-    {
-        type = "technology",
-        name = "angels-copper-tungsten-smelting-1",
-        icon = "__extendedangels__/graphics/technology/smelting-copper-tungsten.png",
-        icon_size = 128,
-        prerequisites = {
-            "angels-copper-smelting-1",
-            "angels-tungsten-smelting-1",
-        },
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "copper-tungsten-smelting-1"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "molten-copper-tungsten-smelting-1"
-            },
-        },
-        unit = {
-            count = 75,
-            ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-                {"chemical-science-pack", 1},
-                {"production-science-pack", 1},
-            },
-            time = 30
-        },
-        order = "c-a"
-    },
-
-    -- Angels copper tungsten smelting 2
-    {
-        type = "technology",
-        name = "angels-copper-tungsten-smelting-2",
-        icon = "__extendedangels__/graphics/technology/smelting-copper-tungsten.png",
-        icon_size = 128,
-        prerequisites = {
-            "angels-copper-tungsten-smelting-1",
-        },
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "copper-tungsten-smelting-2"
-            },
-        },
-        unit = {
-            count = 100,
-            ingredients = {
-                {"automation-science-pack", 1},
-                {"logistic-science-pack", 1},
-                {"chemical-science-pack", 1},
-                {"production-science-pack", 1},
-                {"utility-science-pack", 1},
-            },
-            time = 30
-        },
-        order = "c-a"
-    },
 
     -- Angels stone smelting 4
     {
@@ -124,7 +63,7 @@ data:extend({
     },
 
     -- Angels tungsten carbide smelting 1
-    {
+    mods["bobplates"] and {
         type = "technology",
         name = "angels-tungsten-carbide-smelting-1",
         icon = "__extendedangels__/graphics/technology/smelting-tungsten-carbide.png",
@@ -154,9 +93,70 @@ data:extend({
         },
         order = "c-a"
     },
+    -- Angels copper tungsten smelting 1
+    mods["bobplates"] and {
+        type = "technology",
+        name = "angels-copper-tungsten-smelting-1",
+        icon = "__extendedangels__/graphics/technology/smelting-copper-tungsten.png",
+        icon_size = 128,
+        prerequisites = {
+            "angels-copper-smelting-1",
+            "angels-tungsten-smelting-1",
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "copper-tungsten-smelting-1"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "molten-copper-tungsten-smelting-1"
+            },
+        },
+        unit = {
+            count = 75,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+            },
+            time = 30
+        },
+        order = "c-a"
+    },
+
+    -- Angels copper tungsten smelting 2
+    mods["bobplates"] and {
+        type = "technology",
+        name = "angels-copper-tungsten-smelting-2",
+        icon = "__extendedangels__/graphics/technology/smelting-copper-tungsten.png",
+        icon_size = 128,
+        prerequisites = {
+            "angels-copper-tungsten-smelting-1",
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "copper-tungsten-smelting-2"
+            },
+        },
+        unit = {
+            count = 100,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+            },
+            time = 30
+        },
+        order = "c-a"
+    },
 
     -- Angels tungsten carbide smelting 2
-    {
+    mods["bobplates"] and {
         type = "technology",
         name = "angels-tungsten-carbide-smelting-2",
         icon = "__extendedangels__/graphics/technology/smelting-tungsten-carbide.png",
@@ -186,7 +186,7 @@ data:extend({
     },
 
     -- Angels tungsten carbide smelting 3
-    {
+    mods["bobplates"] and {
         type = "technology",
         name = "angels-tungsten-carbide-smelting-3",
         icon = "__extendedangels__/graphics/technology/smelting-tungsten-carbide.png",

@@ -43,17 +43,17 @@ local standard_ingredients = {
 		{type = "item", name = "stone-brick", amount = 100},
 	},
 	[2] = {
-		{type = "item", name = "invar-alloy", amount = 400},
-		{type = "item", name = "brass-gear-wheel", amount = 150},
-		{type = "item", name = "steel-bearing", amount = 100},
+		{type = "item", name = mods["bobplates"] and "invar-alloy" or "angels-plate-nickel", amount = mods["bobplates"] and 400 or 300}, -- invar -> nickel, 400 -> 300
+		{type = "item", name = mods["bobplates"] and "brass-gear-wheel" or "angels-plate-zinc", amount = mods["bobplates"] and 150 or 200}, -- brass -> zinc, 150 -> 200
+		{type = "item", name = mods["bobplates"] and "steel-bearing" or "steel-plate", amount = mods["bobplates"] and 100 or 200}, -- Steel bearing -> plate, 100 -> 200
 	},
 	[3] = {
-		{type = "item", name = "titanium-plate", amount = 800},
-		{type = "item", name = "ceramic-bearing", amount = 200},
+		{type = "item", name = mods["bobplates"] and "titanium-plate" or "angels-plate-titanium", amount = 800}, -- Use Angels Variant
+		{type = "item", name = mods["bobplates"] and "ceramic-bearing" or "concrete-brick", amount = 200}, -- ceramic bearing -> concrete brick
 	},
 	[4] = {
-		{type = "item", name = "tungsten-plate", amount = 1000},
-		{type = "item", name = "nitinol-bearing", amount = 250},
+		{type = "item", name = mods["bobplates"] and "tungsten-plate" or "angels-plate-tungsten", amount = 1000}, -- Use Angels Variant
+		{type = "item", name = mods["bobplates"] and "nitinol-bearing" or "reinforced-concrete-brick", amount = 250}, -- nitinol bearing -> reinforced concrete brick
 	}
 }
 
@@ -64,19 +64,19 @@ local logistic_ingredients = {
 		{type = "item", name = "advanced-circuit", amount = 40},
 	},
 	[2] = {
-		{type = "item", name = "invar-alloy", amount = 400},
-		{type = "item", name = "brass-gear-wheel", amount = 150},
-		{type = "item", name = "steel-bearing", amount = 100},
+		{type = "item", name = mods["bobplates"] and "invar-alloy" or "angels-plate-nickel", amount = mods["bobplates"] and 400 or 300}, -- invar -> nickel, 400 -> 300
+		{type = "item", name = mods["bobplates"] and "brass-gear-wheel" or "angels-plate-zinc", amount = mods["bobplates"] and 150 or 200}, -- brass -> zinc, 150 -> 200
+		{type = "item", name = mods["bobplates"] and "steel-bearing" or "steel-plate", amount = mods["bobplates"] and 100 or 200}, -- Steel bearing -> plate, 100 -> 200
 	},
 	[3] = {
-		{type = "item", name = "titanium-plate", amount = 800},
-		{type = "item", name = "ceramic-bearing", amount = 200},
+		{type = "item", name = mods["bobplates"] and "titanium-plate" or "angels-plate-titanium", amount = 800}, -- Use Angels Variant
+		{type = "item", name = mods["bobplates"] and "ceramic-bearing" or "concrete-brick", amount = 200}, -- ceramic bearing -> concrete brick
 		{type = "item", name = "processing-unit", amount = 200},
 	},
 	[4] = {
-		{type = "item", name = "tungsten-plate", amount = 1000},
-		{type = "item", name = "nitinol-bearing", amount = 250},
-		{type = "item", name = "advanced-processing-unit", amount = 200},
+		{type = "item", name = mods["bobplates"] and "tungsten-plate" or "angels-plate-tungsten", amount = 1000}, -- Use Angels Variant
+		{type = "item", name = mods["bobplates"] and "nitinol-bearing" or "reinforced-concrete-brick", amount = 250}, -- nitinol bearing -> reinforced concrete brick
+		{type = "item", name = mods["bobplates"] and "advanced-processing-unit" or "processing-unit", amount = mods["bobplates"] and 200 or 350},
 	}
 }
 
@@ -118,5 +118,6 @@ end
 
 -- Add all the prerequisites
 for name, prerequisite in pairs(prerequisite_map) do
-	bobmods.lib.recipe.add_ingredient(name, prerequisite)
+    angelsmods.functions.OV.modify_input(name, {prerequisite, 1})
+    angelsmods.functions.OV.execute()
 end

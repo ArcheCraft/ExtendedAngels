@@ -9,8 +9,8 @@ data:extend({
         icon_size = 128,
         prerequisites = {
             "angels-warehouses",
-            "zinc-processing",
-            "angels-invar-smelting-1",
+            mods["bobplates"] and "zinc-processing" or "angels-zinc-smelting-1",
+            mods["bobplates"] and "angels-invar-smelting-1" or "angels-nickel-smelting-1",
         },
         effects = {
             {
@@ -38,7 +38,7 @@ data:extend({
         prerequisites = {
             "warehouses-2",
             "angels-titanium-smelting-1",
-            "ceramics",
+            mods["bobplates"] and "ceramics" or "angels-stone-smelting-2",
         },
         effects = {
             {
@@ -67,7 +67,7 @@ data:extend({
         prerequisites = {
             "warehouses-3",
             "angels-tungsten-smelting-1",
-            "nitinol-processing",
+            mods["bobplates"] and "nitinol-processing" or "angels-stone-smelting-3",
         },
         effects = {
             {
@@ -97,8 +97,8 @@ data:extend({
         prerequisites = {
             "angels-logistic-warehouses",
             "warehouses-2",
-            "zinc-processing",
-            "angels-invar-smelting-1",
+            mods["bobplates"] and "zinc-processing" or "angels-zinc-smelting-1",
+            mods["bobplates"] and "angels-invar-smelting-1" or "angels-nickel-smelting-1",
         },
         effects = {
             {
@@ -144,7 +144,7 @@ data:extend({
             "logistic-warehouses-2",
             "warehouses-3",
             "angels-titanium-smelting-1",
-            "ceramics",
+            mods["bobplates"] and "ceramics" or "angels-stone-smelting-2",
             "advanced-electronics-2",
         },
         effects = {
@@ -192,8 +192,8 @@ data:extend({
             "logistic-warehouses-3",
             "warehouses-4",
             "angels-tungsten-smelting-1",
-            "nitinol-processing",
-            "advanced-electronics-3",
+            mods["bobplates"] and "nitinol-processing" or "angels-stone-smelting-3",
+            mods["bobplates"] and "advanced-electronics-3",
         },
         effects = {
             {

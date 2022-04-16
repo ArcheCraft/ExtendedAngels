@@ -94,8 +94,27 @@ data:extend({
         order = "i[casting-powder-tungsten]-c",
     },
 
-    -- Molten copper tungsten 1
+    -- Titanium concrete brick
     {
+        type = "recipe",
+        name = "angels-titanium-concrete-brick",
+        category = "crafting-with-fluid",
+        subgroup = "angels-stone-casting",
+        energy_required = 4,
+        enabled = "false",
+        ingredients = {
+            {type = "item", name = "stone-brick", amount = 4},
+            {type = "item", name = "angels-plate-titanium", amount = 4},
+            {type = "fluid", name = "liquid-concrete", amount = 40},
+        },
+        results = {
+            {type = "item", name = "titanium-concrete-brick", amount = 4},
+        },
+        order = "k[titanium-concrete-brick]",
+    },
+
+    -- Molten copper tungsten 1
+    mods["bobplates"] and {
         type = "recipe",
         name = "copper-tungsten-smelting-1",
         category = "induction-smelting",
@@ -115,7 +134,7 @@ data:extend({
     },
 
     -- Molten copper tungsten 2
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "copper-tungsten-smelting-2",
         category = "induction-smelting-2",
@@ -136,7 +155,7 @@ data:extend({
     },
 
     -- Copper tungsten
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "molten-copper-tungsten-smelting-1",
         category = "casting",
@@ -153,7 +172,7 @@ data:extend({
     },
 
     -- Tungsten hexachloride
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "solid-tungsten-oxide-smelting-2",
         category = "liquifying",
@@ -170,7 +189,7 @@ data:extend({
     },
 
     -- Tungsten carbide powder mixture 1
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "tungsten-carbide-smelting-1",
         category = "chemical-smelting",
@@ -190,7 +209,7 @@ data:extend({
     },
 
     -- Tungsten carbide powder mixture 2
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "tungsten-carbide-smelting-2",
         category = "chemical-smelting",
@@ -212,7 +231,7 @@ data:extend({
     },
 
     -- Tungsten carbide powder mixture 3
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "tungsten-carbide-smelting-3",
         category = "chemical-smelting",
@@ -233,7 +252,7 @@ data:extend({
     },
 
     -- Tungsten carbide
-    {
+    mods["bobplates"] and {
         type = "recipe",
         name = "angels-plate-tungsten-carbide",
         category = "sintering",
@@ -259,25 +278,6 @@ data:extend({
             },
         },
         order = "ad",
-    },
-
-    -- Titanium concrete brick
-    {
-        type = "recipe",
-        name = "angels-titanium-concrete-brick",
-        category = "crafting-with-fluid",
-        subgroup = "angels-stone-casting",
-        energy_required = 4,
-        enabled = "false",
-        ingredients = {
-            {type = "item", name = "stone-brick", amount = 4},
-            {type = "item", name = "angels-plate-titanium", amount = 4},
-            {type = "fluid", name = "liquid-concrete", amount = 40},
-        },
-        results = {
-            {type = "item", name = "titanium-concrete-brick", amount = 4},
-        },
-        order = "k[titanium-concrete-brick]",
     },
 })
 
